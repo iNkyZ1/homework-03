@@ -6,8 +6,9 @@
 	"scripts": {
 		"dev": "webpack serve --config webpack.dev.js",
 		"build": "webpack --config webpack.prod.js",
-		"clean": "rm -rf dist",
-		"lint": "eslint src --ext .js"
+		"clean": "rimraf dist",
+		"lint": "eslint src --ext .ts,.tsx",
+		"typecheck": "tsc --noEmit -p tsconfig.json"
 	},
 	"keywords": [
 		"webpack",
@@ -16,6 +17,8 @@
 	"author": "Nick",
 	"license": "ISC",
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.46.3",
+		"@typescript-eslint/parser": "^8.46.3",
 		"css-loader": "^6.11.0",
 		"eslint": "^8.57.1",
 		"html-webpack-plugin": "^5.6.4",
