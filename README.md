@@ -1,8 +1,8 @@
-# homework-02
+# homework-03
 
-## Nature Noise (Webpack Learning Project)
+## Nature Noise (Webpack + TypeScript Learning Project)
 
-> Учебное приложение для отработки настройки Webpack 5 и работы со статикой, звуками и стилями.
+> Учебное приложение для отработки настройки Webpack 5 c TypeScript и работы со статикой, звуками и стилями.
 > Воспроизводятся звуки природы с одним активным источником, пауза/продолжение по повторному нажатию, регулятор громкости и смена фона под выбранный звук.
 
 ## О проекте
@@ -23,12 +23,11 @@
 
 ## Технологии
 
--   **Webpack 5**, **webpack-dev-server**
+-   **TypeScript (strict)**, **Webpack 5**, **webpack-dev-server**
 -   Разделённые конфиги: `webpack.common.js`, `webpack.dev.js`, `webpack.prod.js`
--   **Sass** (`sass`, `sass-loader`), **css-loader**, **style-loader** (dev) / **mini-css-extract-plugin** (prod)
+-   **Sass** (`sass`, `sass-loader`), **css-loader**, `style-loader` (dev) / **mini-css-extract-plugin** (prod)
 -   **html-webpack-plugin**
--   **ESLint** (минимальная конфигурация)
--   **JavaScript (ES Modules)**
+-   **ESLint** с `@typescript-eslint/*`
 
 ## Структура проекта
 
@@ -40,8 +39,10 @@ project-root/
 │  │  ├─ audio/
 │  │  └─ images/
 │  ├─ styles.scss
-│  └─ index.js
+│  ├─ declarations.d.ts
+│  └─ index.ts
 ├─ index.html
+├─ tsconfig.json
 ├─ webpack.common.js
 ├─ webpack.dev.js
 ├─ webpack.prod.js
@@ -60,9 +61,10 @@ npm 9+
 
 ```bash
 npm install
-npm run dev # запуск dev-сервера (http://localhost:3000)
-npm run build # сборка production версии
-npm run lint # проверка кода ESLint
+npm run dev       # запуск dev-сервера (http://localhost:3000)
+npm run build     # production-сборка в папку dist
+npm run typecheck # проверка типов TypeScript (tsc --noEmit)
+npm run lint      # линтинг исходников (ESLint для .ts/.tsx)
 ```
 
 ## Результат
