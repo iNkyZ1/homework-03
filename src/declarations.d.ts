@@ -1,0 +1,15 @@
+declare module '*.mp3';
+declare module '*.wav';
+declare module '*.ogg';
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.png';
+declare module '*.gif';
+declare module '*.svg';
+declare module '*.webp';
+declare module '*.avif';
+declare module '*.ttf';
+declare module '*.otf';
+declare module '*.woff';
+declare module '*.woff2';
+declare module '*.scss';

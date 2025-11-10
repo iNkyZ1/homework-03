@@ -5,6 +5,7 @@ const path = require('path');
 module.exports = merge(common, {
 	mode: 'development',
 	devtool: 'eval-cheap-module-source-map',
+
 	module: {
 		rules: [
 			{
@@ -17,6 +18,7 @@ module.exports = merge(common, {
 			},
 		],
 	},
+
 	devServer: {
 		port: 3000,
 		open: true,
